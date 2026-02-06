@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Marketplace | ZerkFormer</title>
+<title>Marketplace</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<h1>MARKETPLACE</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="giveaways.html">Giveaways</a>
-</nav>
-</header>
+<header><h1>MARKETPLACE</h1></header>
 
 <div class="container">
-
-<div class="card">
-<h3>Available</h3>
-<p>
-• Digital Accounts<br>
-• Services<br>
-• Tools
-</p>
-<a class="btn" href="https://t.me/YOURUSERNAME">Buy via Telegram</a>
+<div class="card" id="marketSection">
+<p>Digital accounts & services.</p>
+<a class="btn" href="https://t.me/zerkformer">Buy via Telegram</a>
+</div>
 </div>
 
-</div>
+<script>
+if(!window.ZERK_CONFIG.features.marketplace){
+ document.getElementById("marketSection").style.display="none";
+}
+</script>
 
-<footer>Deals only via Telegram.</footer>
-
+<footer>Peer to peer only.</footer>
 </body>
 </html>
