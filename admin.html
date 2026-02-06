@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+</head>
+<body>
+
+<script>
+const pass = prompt("Admin password:");
+if(pass!=="ZERK-ADMIN"){
+ document.body.innerHTML="<h2 style='color:red;text-align:center;'>ACCESS DENIED</h2>";
+}
+</script>
+
+<header><h1>ADMIN PANEL</h1></header>
+
+<div class="container">
+<div class="card">
+<h3>Controls</h3>
+<p>Edit <b>config.js</b> to:</p>
+<ul>
+<li>Enable maintenance</li>
+<li>Toggle features</li>
+</ul>
+</div>
+</div>
+
+<footer>Private access.</footer>
+</body>
+</html>
