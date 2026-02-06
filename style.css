@@ -7,17 +7,15 @@
 
 body{
   background:#0b0b0b;
-  color:#ffffff;
-  animation: fadeIn 1s ease-in;
+  color:#fff;
+  animation:fadeIn 1s ease-in;
 }
 
-/* PAGE FADE */
 @keyframes fadeIn{
   from{opacity:0;}
   to{opacity:1;}
 }
 
-/* HEADER */
 header{
   padding:20px;
   text-align:center;
@@ -27,15 +25,14 @@ header{
 h1{
   color:#e50914;
   letter-spacing:3px;
-  animation: slideDown 0.8s ease;
+  animation:slideDown 0.8s ease;
 }
 
 @keyframes slideDown{
-  from{transform:translateY(-25px); opacity:0;}
-  to{transform:translateY(0); opacity:1;}
+  from{transform:translateY(-20px);opacity:0;}
+  to{transform:translateY(0);opacity:1;}
 }
 
-/* NAVBAR */
 nav a{
   margin:0 12px;
   color:#aaa;
@@ -63,35 +60,32 @@ nav a:hover::after{
   width:100%;
 }
 
-/* CONTAINER */
 .container{
   max-width:900px;
   margin:40px auto;
   padding:20px;
 }
 
-/* CARD ANIMATION */
 .card{
   background:#141414;
   padding:25px;
   margin-bottom:25px;
   border-radius:12px;
   border:1px solid #222;
-  animation: rise 0.8s ease;
+  animation:rise 0.8s ease;
   transition:0.3s;
 }
 
 @keyframes rise{
-  from{transform:translateY(20px); opacity:0;}
-  to{transform:translateY(0); opacity:1;}
+  from{transform:translateY(20px);opacity:0;}
+  to{transform:translateY(0);opacity:1;}
 }
 
 .card:hover{
   transform:translateY(-6px);
-  box-shadow:0 0 15px rgba(229,9,20,0.3);
+  box-shadow:0 0 15px rgba(229,9,20,0.35);
 }
 
-/* BUTTON */
 .btn{
   display:inline-block;
   margin-top:15px;
@@ -109,10 +103,8 @@ nav a:hover::after{
   100%{box-shadow:0 0 0 0 rgba(229,9,20,0);}
 }
 
-/* FOOTER */
 footer{
   text-align:center;
   padding:20px;
   color:#666;
-  font-size:14px;
 }
