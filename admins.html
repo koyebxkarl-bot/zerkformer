@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admins | ZerkFormer</title>
+<title>Admins</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<h1>VERIFIED ADMINS</h1>
-<nav>
-<a href="index.html">Home</a>
-</nav>
-</header>
+<header><h1>VERIFIED ADMINS</h1></header>
 
 <div class="container">
-
-<div class="card">
+<div class="card" id="adminSection">
 <p>
 @Zerkowner2 – Owner<br>
-@KrocxyYT – Co-Owner<br>
 @Yowxer – Devloper
 </p>
-<p>⚠️ Admins never DM first</p>
+<p>⚠ Admins never DM first</p>
+</div>
 </div>
 
-</div>
+<script>
+if(!window.ZERK_CONFIG.features.admins){
+ document.getElementById("adminSection").style.display="none";
+}
+</script>
 
-<footer>Stay alert. Avoid scams.</footer>
-
+<footer>Stay safe.</footer>
 </body>
 </html>
