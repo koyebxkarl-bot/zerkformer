@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Giveaways</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<head><title>Giveaways</title><link rel="stylesheet" href="style.css"></head>
 <body>
 
 <header><h1>GIVEAWAYS</h1></header>
 
 <div class="container">
-<div class="card" id="giveawaySection">
+<div class="card" id="give">
 <p>Active giveaways announced on Telegram.</p>
 </div>
 </div>
 
 <script>
-if(!window.ZERK_CONFIG.features.giveaways){
- document.getElementById("giveawaySection").style.display="none";
-}
+if(!window.ZERK_CONFIG.features.giveaways)
+ document.getElementById("give").style.display="none";
 </script>
 
 <footer>Luck decides.</footer>
