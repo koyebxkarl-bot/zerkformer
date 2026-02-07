@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admin Panel</title>
+<title>ZerkFormer Admin</title>
 <link rel="stylesheet" href="style.css">
-<script src="config.js"></script>
 </head>
 <body>
 
+<div class="container" id="loginBox">
+  <div class="card">
+    <h2>Admin Login</h2>
+
+    <input id="adminId" placeholder="Admin ID"
+      style="width:100%;padding:10px;margin:8px 0;"><br>
+
+    <input id="adminPass" type="password" placeholder="Password"
+      style="width:100%;padding:10px;margin:8px 0;"><br>
+
+    <button class="btn" onclick="login()">Login</button>
+    <p id="error" style="color:red;margin-top:10px;"></p>
+  </div>
+</div>
+
+<div class="container" id="panel" style="display:none;">
+  <div class="card">
+    <h2>Admin Panel</h2>
+    <p>Welcome, <b>ZerkAdmin</b></p>
+
+    <ul>
+      <li>Edit <b>config.js</b> to toggle features</li>
+      <li>Enable / Disable maintenance</li>
+      <li>Control site visibility</li>
+    </ul>
+
+    <button class="btn" onclick="logout()">Logout</button>
+  </div>
+</div>
+
 <script>
-const pass = prompt("Admin password:");
-if(pass!=="ZERK-ADMIN"){
- document.body.innerHTML="<h2 style='color:red;text-align:center;'>ACCESS DENIED</h2>";
+const ADMIN_ID = "ZerkAdmin";
+const ADMIN_PASS = "ZerkAdmin08274";
+
+function login(){
+  const id = document.getElementById("adminId").value;
+  const pass = document.getElementById("adminPass").value;
+
+  if(id === ADMIN_ID && pass === ADMIN_PASS){
+    sessionStorage.setItem("zerkAdmin","true");
+    showPanel();
+  } else {
+    document.getElementById("error").innerText = "Invalid credentials";
+  }
+}
+
+function showPanel(){
+  document.getElementById("loginBox").style.display="none";
+  document.getElementById("panel").style.display="block";
+}
+
+function logout(){
+  sessionStorage.removeItem("zerkAdmin");
+  location.reload();
+}
+
+if(sessionStorage.getItem("zerkAdmin")==="true"){
+  showPanel();
 }
 </script>
 
-<header><h1>ADMIN PANEL</h1></header>
-
-<div class="container">
-<div class="card">
-<h3>Controls</h3>
-<p>Edit <b>config.js</b> to:</p>
-<ul>
-<li>Enable maintenance</li>
-<li>Toggle features</li>
-</ul>
-</div>
-</div>
-
-<footer>Private access.</footer>
 </body>
 </html>
