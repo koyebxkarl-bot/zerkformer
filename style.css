@@ -36,34 +36,6 @@ h1{
   to{transform:translateY(0);opacity:1;}
 }
 
-/* NAV */
-nav a{
-  margin:0 12px;
-  color:#aaa;
-  text-decoration:none;
-  position:relative;
-  transition:.3s;
-}
-
-nav a::after{
-  content:'';
-  position:absolute;
-  width:0;
-  height:2px;
-  background:#e50914;
-  left:0;
-  bottom:-6px;
-  transition:.3s;
-}
-
-nav a:hover{
-  color:#e50914;
-}
-
-nav a:hover::after{
-  width:100%;
-}
-
 /* LAYOUT */
 .container{
   max-width:900px;
@@ -93,75 +65,6 @@ nav a:hover::after{
   box-shadow:0 0 15px rgba(229,9,20,0.35);
 }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:12px 22px;
-  background:#e50914;
-  color:#fff;
-  text-decoration:none;
-  border-radius:8px;
-  animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(229,9,20,0.6);}
-  70%{box-shadow:0 0 0 15px rgba(229,9,20,0);}
-  100%{box-shadow:0 0 0 0 rgba(229,9,20,0);}
-}
-
-/* POPULAR BADGE */
-.popular-badge{
-  position:absolute;
-  top:-12px;
-  right:-12px;
-  background:#e50914;
-  color:#fff;
-  font-size:12px;
-  font-weight:700;
-  padding:6px 14px;
-  border-radius:20px;
-  letter-spacing:1px;
-  box-shadow:0 0 15px rgba(229,9,20,0.7);
-  animation:popPulse 2s infinite,floatBadge 3s ease-in-out infinite;
-  overflow:hidden;
-}
-
-@keyframes popPulse{
-  0%{box-shadow:0 0 0 0 rgba(229,9,20,0.7);}
-  70%{box-shadow:0 0 0 12px rgba(229,9,20,0);}
-  100%{box-shadow:0 0 0 0 rgba(229,9,20,0);}
-}
-
-@keyframes floatBadge{
-  0%{transform:none;}
-  50%{transform:translateY(-4px);}
-  100%{transform:none;}
-}
-
-.popular-badge::after{
-  content:'';
-  position:absolute;
-  top:0;
-  left:-100%;
-  width:100%;
-  height:100%;
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.6),
-    transparent
-  );
-  animation:shine 2.5s infinite;
-}
-
-@keyframes shine{
-  0%{left:-100%;}
-  60%{left:100%;}
-  100%{left:100%;}
-}
-
 /* BACK BUTTON */
 .back-btn{
   position:fixed;
@@ -172,7 +75,6 @@ nav a:hover::after{
   border:1px solid #222;
   padding:10px 14px;
   border-radius:50px;
-  font-size:14px;
   cursor:pointer;
   z-index:1000;
   transition:.3s;
@@ -180,32 +82,17 @@ nav a:hover::after{
 
 .back-btn:hover{
   background:#e50914;
-  box-shadow:0 0 12px rgba(229,9,20,0.6);
   transform:translateX(-4px);
 }
 
-/* VERIFIED BADGE */
-.verified-badge{
+/* VERIFIED TICK */
+.verified-tick{
   display:inline-block;
   margin-left:6px;
-  background:#1da1f2;
-  color:#fff;
-  font-size:10px;
-  padding:3px 7px;
-  border-radius:12px;
-  font-weight:600;
-  vertical-align:middle;
-  box-shadow:0 0 8px rgba(29,161,242,0.6);
-}
-
-/* DEV ICON (NO BACKGROUND LOOK) */
-.dev-icon{
-  width:18px;
-  height:18px;
-  margin-left:6px;
-  vertical-align:middle;
-  background:transparent;
-  filter:drop-shadow(0 0 4px rgba(255,255,255,0.4));
+  color:#1da1f2;
+  font-weight:700;
+  font-size:14px;
+  text-shadow:0 0 6px rgba(29,161,242,0.7);
 }
 
 /* FOOTER */
