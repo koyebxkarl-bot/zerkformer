@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admins</title>
-<link rel="stylesheet" href="style.css">
+  <title>Admins</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header><h1>VERIFIED ADMINS</h1></header>
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>VERIFIED ADMINS</h1>
+</header>
 
 <div class="container">
-<div class="card" id="adminSection">
-<p>
-@Zerkowner2 – Owner<br>
-@Yowxer – Devloper
-</p>
-<p>⚠ Admins never DM first</p>
-</div>
+
+  <div class="card" id="admins">
+
+    <p style="font-size:16px;line-height:1.8">
+
+      <b>Zerk Owner</b>
+      <span class="verified-badge">✔ VERIFIED</span>
+      <br>
+
+      <b>Developer</b>
+      <img src="dev.png" class="dev-icon" alt="Developer Icon">
+
+    </p>
+
+    <p style="color:#aaa;font-size:14px">
+      ⚠ Admins never DM first.  
+      Always contact using official links only.
+    </p>
+
+  </div>
+
 </div>
 
+<script src="config.js"></script>
 <script>
 if(!window.ZERK_CONFIG.features.admins){
- document.getElementById("adminSection").style.display="none";
+  document.getElementById("admins").style.display="none";
 }
 </script>
 
-<footer>Stay safe.</footer>
+<footer>Stay alert. Stay safe.</footer>
+
 </body>
 </html>
