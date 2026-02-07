@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Marketplace</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<head><title>Marketplace</title><link rel="stylesheet" href="style.css"></head>
 <body>
 
 <header><h1>MARKETPLACE</h1></header>
 
 <div class="container">
-<div class="card" id="marketSection">
-<p>Digital accounts & services.</p>
-<a class="btn" href="https://t.me/zerkformer">Buy via Telegram</a>
+<div class="card" id="market">
+
+<div class="popular-badge">POPULAR</div>
+
+<h2>🔥 Zerk Ultimate Plan</h2>
+<p><b>₹130 / Month</b></p>
+<p>
+🎬 Netflix<br>
+📺 Amazon Prime<br>
+🎌 Crunchyroll<br>
+⏳ 1 Month Validity
+</p>
+
+<p>
+Zerk Ultimate Plan gives you maximum entertainment at minimum cost.
+Fast activation via Telegram.
+</p>
+
+<a class="btn"
+href="https://t.me/Zerkowner2?text=HI%20I%20WANT%20TO%20BUY%20YOUR%20ULTIMATE%20PLAN">
+Buy via Telegram
+</a>
 </div>
 </div>
 
 <script>
-if(!window.ZERK_CONFIG.features.marketplace){
- document.getElementById("marketSection").style.display="none";
-}
+if(!window.ZERK_CONFIG.features.marketplace)
+ document.getElementById("market").style.display="none";
 </script>
 
-<footer>Peer to peer only.</footer>
+<footer>Deals via Telegram only.</footer>
 </body>
 </html>
